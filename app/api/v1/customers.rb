@@ -52,7 +52,16 @@ class V1::Customers < Grape::API
       requires :password, type: String, desc: "Password of Customer"
     end
     post :sign_in do
-      customer = Customer.authorize! declared_params
+      customer = Customer.find_by_email(declared_params["email"])
+      if customer.present? && customer.valid_password?(declared_params["password"])
+        status 200
+        extra_infos = {
+          messages: "Successfully Login"
+        }
+      else
+        raise ActiveRecord::RecordInvalid, customer
+      end
+      present extra_infos
       present customer, with: Entities::V1::Customer
     end
   end
