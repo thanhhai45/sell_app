@@ -20,5 +20,6 @@ module SellApp
     # config.eager_load_paths << Rails.root.join("extras")
     config.autoload_paths += Dir["#{Rails.root}/app"]
     config.eager_load_paths << Rails.root.join('lib')
+    config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   end
 end

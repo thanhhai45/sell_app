@@ -73,4 +73,21 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  routes.default_url_options = { host: 'localhost', port: 3000 }
+
+  # For MailCatcher
+  config.action_controller.asset_host = Rails.application.credentials.ASSET_HOST
+  config.action_mailer.preview_path = "#{Rails.root}/test/mailers/previews"
+  config.action_mailer.asset_host = Rails.application.credentials.ASSET_HOST
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_options = { from: 'tuan.ho.techapollo@gmail.com' }
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.smtp_settings = {
+    port: Rails.application.credentials.SMTP_PORT.to_i,
+    address: Rails.application.credentials.SMTP_HOST,
+    user_name: Rails.application.credentials.SMTP_USERNAME,
+    password: Rails.application.credentials.SMTP_PASSWORD
+  } 
 end
