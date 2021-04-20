@@ -26,4 +26,5 @@
 #  fk_rails_...  (category_id => categories.id)
 #
 class Product < ApplicationRecord
+  has_many_attached :image
 end

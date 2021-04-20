@@ -63,3 +63,32 @@ gem 'grape-swagger-entity', '~> 0.5.1'
 gem 'grape_logging', '~> 1.8', '>= 1.8.4'
 gem 'annotate'
 gem 'devise'
+# trestle admin
+gem 'trestle', '~> 0.9.4'
+gem 'trestle-auth', '~> 0.4.1'
+gem 'trestle-active_storage', '~> 3.0', '>= 3.0.1'
+gem 'trestle-tinymce', '~> 0.3.0'
+gem 'trestle-search', '~> 0.4.3'
+
+gem 'json-jwt'
+# aws s3
+gem 'aws-sdk-s3', '~> 1.61', '>= 1.61.2'
+gem 'enumerize'
+gem 'activerecord-import'
+gem 'fcm'
+gem 'image_processing', '~> 1.2'
+
+gem 'fb_graph2'
+
+# # image
+gem 'mini_magick', '~> 4.10', '>= 4.10.1'
+# # setting
+gem 'rails-settings-cached', '~> 0.7.2'
+# # job
+gem 'sidekiq', '~> 6.0', '>= 6.0.6'
+gem 'sidekiq-cron', '~> 1.2'
+# # paging
+gem 'pagy', '~> 3.5'
+# # search
+gem 'pg_search', '~> 2.3', '>= 2.3.2'
+
