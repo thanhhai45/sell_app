@@ -8,6 +8,7 @@
 #  name        :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  parent_id   :integer          default(0)
 #
 require "test_helper"
 
