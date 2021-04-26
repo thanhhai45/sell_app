@@ -26,5 +26,9 @@
 #  fk_rails_...  (category_id => categories.id)
 #
 class Product < ApplicationRecord
+  extend Enumerize
+
   has_many_attached :image
+
+  enumerize :status, in: [ :ative, :inactive ]
 end

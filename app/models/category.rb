@@ -11,4 +11,7 @@
 #  parent_id   :integer          default(0)
 #
 class Category < ApplicationRecord
+  extend Enumerize
+
+  enumerize :is_publish, in: [ :active, :inactive ]
 end

@@ -91,4 +91,5 @@ gem 'sidekiq-cron', '~> 1.2'
 gem 'pagy', '~> 3.5'
 # # search
 gem 'pg_search', '~> 2.3', '>= 2.3.2'
-
+# enumerize
+gem 'enumerize'
