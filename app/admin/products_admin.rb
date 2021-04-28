@@ -30,6 +30,10 @@ Trestle.resource(:products) do
         collection_select :category_id, Category.all, :id, :name
       end
       col(xs: 6) do
+        text_field :sku
+        number_field :weight
+        number_field :height
+        text_field :size
         active_storage_field :thumbnail
         active_storage_field :images
       end

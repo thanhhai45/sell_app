@@ -9,8 +9,10 @@ class V1::Categories < Grape::API
       }
     get do
       categories = Category.all
+      result = pagination_values categories
       status 200
-      present categories, with: Entities::V1::Category
+      present result[:pagination], with: Entities::V1::Pagination
+      present result[:data], with: Entities::V1::Pagination
     end 
   end
 end

@@ -19,8 +19,10 @@ class V1::Products < Grape::API
                 else
                   Product.all
                 end
+      result = pagination_values product
       status 200
-      present product, with: Entities::V1::Product
+      present result[:pagination], with: Entities::V1::Pagination
+      present result[:data], with: Entities::V1::Product
     end
   end 
 end
